@@ -1,0 +1,9 @@
+
+.hero-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider-item{
+  display: flex;
+}
