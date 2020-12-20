@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>OLX-project</title>
-  </head>
-  <body>
-    <header class="header">
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>OLX-project</title>
+</head>
+<body>
+  <header class="header">
       <div class="container">
         <div class="mobile-menu-wrapper">
           <button class="mobile-input-cross"></button>
@@ -79,14 +79,72 @@
         <ul class="categories-filter-tablet"></ul>
       </div>
     </header>
-    <main>
-      <div class="loader"> 
+  <main>
+    <section class="hero">
+      <div class="hero-wrapper">
+        <ul class="hero-slider">
+          <li class="hero-slider__item">
+            <div class="hero-slider__description">
+              <p class="hero-slider__title">Smart Watch</p>
+              <p class="hero-slider__price">799</p>
+            </div>
+            <img class="hero-slider__image" src="./images/hero-img/watch.png" alt="">
+            </li>
+        </ul>
+        <ul class="side-items">
+          <li class="slider-item">
+            <div class="slider-item__description">
+              <p class="slider-item__title">Pink Beat<br>Headphones</p>
+              <p class="slider-item__price">599</p>
+            </div>
+            <img class="slider-item__image" src="./images/hero-img/headphones.png">
+          </li>
+
+          <li class="slider-item">
+            <div class="slider-item__description">
+              <p class="slider-item__title">Old School Radio</p>
+              <p class="slider-item__price slider-item__price_orange">975</p>
+            </div>
+            <img class="slider-item__image" src="./images/hero-img/radio.png">
+          </li>
+        </ul>
+
+        <ul class="bottom-items">
+          <li class="slider-item">
+            <div class="slider-item__description">
+              <p class="slider-item__title">Compact Stereo<br>Speakers</p>
+              <p class="slider-item__price">850</p>
+            </div>
+            <img class="slider-item__image" src="./images/hero-img/speaker.png">
+          </li>
+
+          <li class="slider-item">
+            <div class="slider-item__description">
+              <p class="slider-item__title">Drone Flying 42K<br>black</p>
+              <p class="slider-item__price slider-item__price_orange">4000</p>
+            </div>
+            <img class="slider-item__image" src="./images/hero-img/drone.png">
+          </li>
+
+          <li class="slider-item">
+            <div class="slider-item__description">
+              <p class="slider-item__title">Vintage Microphone<br>and Stand</p>
+              <p class="slider-item__price slider-item__price_white">2400</p>
+            </div>
+            <img class="slider-item__image" src="./images/hero-img/mic.png">
+          </li>
+        </ul>
+      </div>
+    </section>
+<div class="loader"> 
         <button type="button" class="loader__btn">Загрузить ещё</button>
       </div>
       <div class="modal-wrapper">
       <div class="modal"></div>
     </div>
-    </main>
-    <footer></footer>
-  </body>
+  </main>
+  <footer>
+
+  </footer>
+</body>
 </html>
