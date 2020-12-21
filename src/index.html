@@ -21,9 +21,9 @@
           <div class="mobile-menu-closed">
             <button class="close-menu"></button>
             <div class="header-auth-mobile">
-              <button class="sign-in__btn" data-btn="signin">Вход</button>
+              <button id="signInDrop" class="sign-in__btn" data-btn="signin">Вход</button>
               <span class="sign-in-up__stick"></span>
-              <button class="sign-up__btn" data-btn="signup">
+              <button id="signUpDrop" class="sign-up__btn" data-btn="signup">
                 Регистрация
               </button>
             </div>
@@ -52,13 +52,16 @@
           />
           <button class="header__input--btn"></button>
           <div class="header-auth">
-            <button class="sign-in__btn" data-btn="signin">Вход</button>
+            <button id="signInHeader" class="sign-in__btn" data-btn="signin">Вход</button>
             <span class="sign-in-up__stick"></span>
-            <button class="sign-up__btn" data-btn="signup">Регистрация</button>
+            <button id="signUpHeader" class="sign-up__btn" data-btn="signup">Регистрация</button>
           </div>
-          <button class="header__create-ad-btn modal-btn">
-            Создать объявление
-          </button>
+          <a href="#" class="header__create-ad-btn modal-btn">
+            <span>
+              Создать объявление
+            </span>
+            <div class="liquid"></div>
+          </a>
         </div>
         <div class="tablet-bottom-wrapper">
           <ul class="categories-filter"></ul>
@@ -81,6 +84,7 @@
       </div>
     </header>
   <main>
+    <button class="modal-btn"></button>
     <section class="hero">
       <div class="hero-wrapper">
         <ul class="hero-slider">
@@ -102,32 +106,6 @@
     </section>
     <section class="categories">
       <div class="container">
-        <div class="category">
-          <ul class="category-list">
-            <h2 class="category-title">Распродажа</h2>
-            <p class="category-description">
-              Товары домашнего обихода, видео, аудио, наушники, камеры,
-              аксессуары и многое другое.
-            </p>
-            <a href="" class="" data-category="category">Смотреть все</a>
-            <!--Sale-->
-            <li class="category-list_item">
-              <img
-                src="./images/img/img source/picture (8).jpg"
-                alt="name"
-                class="thing-img"
-                width="280"
-              />
-              <p class="thing-name">Victrola Vintage</p><br />
-              <p class="old-price"
-                >2,000<p class="thin-current">€</p></p
-              >
-              <p class="thing-price"
-                >1,200<p class="thin-current">€</p></p
-              >
-            </li>
-          </ul>
-        </div>
         <div class="category">
           <ul class="category-list">
             <h2 class="category-title">Недвижимость</h2>
@@ -191,9 +169,13 @@
       </div>
       <div class="modal-wrapper">
       <div class="modal"></div>
+      <div class="auth__wrap modal"></div>
+      <div class="logOut__wrap modal"></div> 
     </div>
   </main>
    <footer class="footer">
+     <div class="modalContainer">
+     </div>
       <div class="container">
         <p class="text-1">
           &copy; 2020 &nbsp;&nbsp;<span class="line-1"></span>&nbsp;&nbsp; All
