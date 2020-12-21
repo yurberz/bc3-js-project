@@ -1,20 +1,22 @@
 /* ================================ */
 
-.auth__wrap {
+.authForm {
+  background-color: white;
   width: 530px;
-  /* height: 530px; */
   padding: 50px;
   outline: 1px solid teal;
-  position: relative;
+  position: absolute;
+  top: 180px;
+  left: 200px;
 }
 
-.logOut__wrap {
+/* .logOut__wrap {
   width: 530px;
   height: 530px;
   padding: 50px;
   outline: 1px solid teal;
   position: relative;
-}
+} */
 
 .authForm__btn_cls {
   position: absolute;
