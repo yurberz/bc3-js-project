@@ -77,11 +77,15 @@ const onHeaderSignUp = () => {
         }
     
     };
+    const clsModal = () => {
+        console.log('hi');
+    }
  
 
   
     refsLogging.authForm.addEventListener('submit', onSignUpBtn );
     refsLogging.authForm.addEventListener('input', gatherInfo);
+    refsLogging.clsBtn.addEventListener('click'. clsModal)
     //закрытие на крестик и после внесения данных
    
 };
