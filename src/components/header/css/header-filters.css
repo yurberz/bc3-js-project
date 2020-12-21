@@ -77,20 +77,29 @@
 }
 
 .filter-item-btn {
-  padding: 8px 21px;
+  position: relative;
+  display: inline-block;
+  padding: 8px 22px;
   font-family: 'MontserratLight', sans-serif;
   font-size: 12px;
+  text-decoration: none;
   color: #818181;
-  background-color: transparent;
-  border-width: 1px;
-  border-radius: 50px;
-  border-color: rgb(206, 210, 209);
-  border-style: solid;
-  opacity: 0.5;
-  outline: none;
-  transition: 0.5s;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
+.filter-item {
+  display: inline-block;
+  height: 32px;
+  padding: 0 0 0 0;
+  border: solid #818181 1px;
+}
+
+.filter-item:hover {
+  display: inline-block;
+  height: 32px;
+  border: solid #112437 1px;
+}
 .mobile-clear-filters-wrapper:hover .header__clear-filter {
   color: #ff6b08;
 }
@@ -184,10 +193,75 @@
     cursor: pointer;
   }
 
-  .filter-item:hover .filter-item-btn {
-    cursor: pointer;
-    border-color: #ff6b08;
-    color: #ff6b08;
-    opacity: 1;
+  .filter-item-btn:hover {
+    transition: 0s;
+    border-color: solid black;
+  }
+
+  .filter-item-btn:hover {
+    color: #1f1e1d;
+    border-color: transparent;
+    background: #ff6b08;
+    box-shadow: 0 0 10px #ff6b08, 0 0 40px #ff6b08, 0 0 80px #ff6b08;
+    transition-delay: 1s;
+  }
+
+  .magic-span {
+    position: absolute;
+    display: block;
+  }
+
+  .magic-span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b08);
+  }
+
+  .filter-item-btn:hover .magic-span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+  .magic-span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ff6b08);
+  }
+
+  .filter-item-btn:hover .magic-span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  .magic-span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff6b08);
+  }
+
+  .filter-item-btn:hover .magic-span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  .magic-span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ff6b08);
+  }
+
+  .filter-item-btn:hover .magic-span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
   }
 }
