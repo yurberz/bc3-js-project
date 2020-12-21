@@ -20,7 +20,7 @@ const logOutWrapRef = document.querySelector('.logOut__wrap');
 
 const url = 'https://callboard-backend.herokuapp.com';
 
-const user = {
+let user = {
     email: '',
     password: '',
 };
@@ -39,53 +39,61 @@ let logInUser ={
     registrationDate: '',
 };
 
-   const gatherInfo = (e) => {
-        if (validator.isEmail(authForm.elements.email.value)) {
-            user[e.target.name] = e.target.value;
-        }
-        return user
+//    const gatherInfo = () => {
+//         if (validator.isEmail(authForm.email.value)) {
+//             const user = {
+//                 email: authForm.email.value,
+//                 password: authForm.password.value,
+//             }
+//             return user
+//         } 
+//         //else { console.log('not appropriate email'); }
+
+//     };
+    
+
+const getRefs = () => {
+    const refsLogging = {};
+    refsLogging.authForm = document.forms.authForm;
+    return refsLogging
 };
 
 
 // ================================SIGN UP=============================
-const onHeaderSignUp = () => {
+const onHeaderSignUp = (e) => {
     modalBackDrop(signUp());
+    getRefs();
 
-    const refsLogging = {
-        authForm: document.forms.authForm,
-        clsBtn: authForm.elements.close,
-        authFormBtnSignUp: authForm.querySelector('.authForm__btn_signUp'),
-        authFormBtnLogIn: authForm.querySelector('.authForm__btn_logIn'),
-        authFormInput: authForm.querySelectorAll('.authForm__input'),
-    };
-                
-    refsLogging.authFormBtnLogIn.classList.remove('active')
-    refsLogging.authFormBtnSignUp.classList.add('active')
+    if (e.target.dataset.btn === 'signup') {
+        authForm.logIn.classList.remove('active');
+        authForm.signUp.classList.add('active');
+    } else if (e.target.dataset.btn === 'signin') {
+        authForm.signUp.classList.remove('active');
+        authForm.logIn.classList.add('active'); 
+    }
 
-    gatherInfo();
-   
-   
-    const onSignUpBtn = async (e) => {
+    const onSignUpBtn = (e) => {
         e.preventDefault();
-        try {
-            const result = await axios.post(`${url}/auth/register`, { ...user });
-            signUpUser = { ...result.data };;
-            return signUpUser
-            
-        } catch (error) {
-            throw error;
-        }
+            user = {
+            email: authForm.email.value,
+            password: authForm.password.value,
+        };
+        console.log(authForm.signIn);
+ 
+         axios.post(`${url}/auth/register`, { ...user })
+            .then(result => console.log(result));
+    //     // console.log(result);
+    //     // signUpUser = { ...result.data };;
+      
+    //     // return signUpUser
     
     };
-    const clsModal = () => {
-        console.log('hi');
-    }
  
+   
 
-  
-    refsLogging.authForm.addEventListener('submit', onSignUpBtn );
-    refsLogging.authForm.addEventListener('input', gatherInfo);
-    refsLogging.clsBtn.addEventListener('click'. clsModal)
+    authForm.addEventListener('submit', onSignUpBtn );
+    // authForm.addEventListener('input', gatherInfo);
+    // refsLogging.clsBtn.addEventListener('click'. clsModal)
     //закрытие на крестик и после внесения данных
    
 };
@@ -93,45 +101,47 @@ const onHeaderSignUp = () => {
 
 
 signUpHeader.addEventListener('click', onHeaderSignUp);
-signUpDrop.addEventListener('click', onHeaderSignUp)
+signUpDrop.addEventListener('click', onHeaderSignUp);
+signInHeader.addEventListener('click', onHeaderSignUp);
+signInDrop.addEventListener('click', onHeaderSignUp);
 
 // ==================END=============================================
 
 
 // =====================LOG IN=======================================
 
-const onHeaderLogIn = () => {
-    modalBackDrop(signUp());
+// const onHeaderLogIn = () => {
+//     modalBackDrop(signUp());
 
-    const refsLogging = {
-        authForm: document.forms.authForm,
-        clsBtn: authForm.elements.close,
-        authFormBtnSignUp: authForm.querySelector('.authForm__btn_signUp'),
-        authFormBtnLogIn: authForm.querySelector('.authForm__btn_logIn'),
-        authFormInput: authForm.querySelectorAll('.authForm__input'),
-    };
+//     const refsLogging = {
+//         authForm: document.forms.authForm,
+//         clsBtn: authForm.elements.close,
+//         authFormBtnSignUp: authForm.querySelector('.authForm__btn_signUp'),
+//         authFormBtnLogIn: authForm.querySelector('.authForm__btn_logIn'),
+//         authFormInput: authForm.querySelectorAll('.authForm__input'),
+//     };
     
     
-    refsLogging.authFormBtnSignUp.classList.remove('active')
-    refsLogging.authFormBtnLogIn.classList.add('active')
+//     refsLogging.authFormBtnSignUp.classList.remove('active')
+//     refsLogging.authFormBtnLogIn.classList.add('active')
 
-    gatherInfo();
-    const onLogInBtn = async (e) => {
-        e.preventDefault();
-        const result = await axios.post(`${url}/auth/login`, { ...user });
-        logInUser = { ...result.data.user }
-        localStorage.setItem('accessToken', JSON.stringify(result.data.accessToken));
+//     gatherInfo();
+//     const onLogInBtn = async (e) => {
+//         e.preventDefault();
+//         const result = await axios.post(`${url}/auth/login`, { ...user });
+//         logInUser = { ...result.data.user }
+//         localStorage.setItem('accessToken', JSON.stringify(result.data.accessToken));
       
-    };
+//     };
 
-    refsLogging.authForm.addEventListener('input', gatherInfo);
-    refsLogging.authForm.addEventListener('submit', onLogInBtn );
+//     refsLogging.authForm.addEventListener('input', gatherInfo);
+//     refsLogging.authForm.addEventListener('submit', onLogInBtn );
 
-}
+// }
 
 
-signInHeader.addEventListener('click', onHeaderLogIn);
-signInDrop.addEventListener('click', onHeaderLogIn);
+// signInHeader.addEventListener('click', onHeaderLogIn);
+// signInDrop.addEventListener('click', onHeaderLogIn);
 
 // =============END============================================
 
