@@ -76,30 +76,12 @@
   margin-right: 8px;
 }
 
-.filter-item-btn {
-  position: relative;
-  display: inline-block;
-  padding: 8px 22px;
-  font-family: 'MontserratLight', sans-serif;
-  font-size: 12px;
-  text-decoration: none;
-  color: #818181;
-  overflow: hidden;
-  transition: 0.2s;
-}
-
-.filter-item {
-  display: inline-block;
-  height: 32px;
-  padding: 0 0 0 0;
-  border: solid #818181 1px;
-}
-
-.filter-item:hover {
+.filter-item-active {
   display: inline-block;
   height: 32px;
   border: solid #112437 1px;
 }
+
 .mobile-clear-filters-wrapper:hover .header__clear-filter {
   color: #ff6b08;
 }
@@ -117,6 +99,110 @@
   background: url(../../refresh-filtres/filters/tune-24px-orange.svg);
 }
 
+/* =========================================================================FILTER BTN======================================== */
+.filter-item-btn {
+  position: relative;
+  display: inline-block;
+  padding: 8px 22px;
+  font-family: 'MontserratMedium', sans-serif;
+  font-size: 12px;
+  height: 30px;
+  text-decoration: none;
+  color: #818181;
+  background: #112437;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.active-category {
+  color: #1f1e1d;
+  border-color: transparent;
+  color: #ff6b08;
+  box-shadow: 0 0 10px #ff6b08, 0 0 40px #ff6b08, 0 0 80px #ff6b08;
+}
+
+.filter-item-btn:hover {
+  color: #ff6b08;
+}
+
+.magic-span {
+  position: absolute;
+  display: block;
+  background: #ff6b08;
+}
+
+.filter-item-btn .magic-span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+
+.filter-item-btn .magic-span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.filter-item-btn .magic-span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.filter-item-btn .magic-span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+/* =========================================================================FILTER BTN======================================== */
 @media (min-width: 768px) {
   .clear-filters-wrapper {
     display: flex;
@@ -160,6 +246,10 @@
     margin-top: 15px;
   }
 
+  .categories-filter-item-opened {
+    display: flex;
+  }
+
   .categories-filter {
     display: none;
   }
@@ -191,77 +281,5 @@
   .filter-item:not(:last-of-type) {
     margin-right: 12px;
     cursor: pointer;
-  }
-
-  .filter-item-btn:hover {
-    transition: 0s;
-    border-color: solid black;
-  }
-
-  .filter-item-btn:hover {
-    color: #1f1e1d;
-    border-color: transparent;
-    background: #ff6b08;
-    box-shadow: 0 0 10px #ff6b08, 0 0 40px #ff6b08, 0 0 80px #ff6b08;
-    transition-delay: 1s;
-  }
-
-  .magic-span {
-    position: absolute;
-    display: block;
-  }
-
-  .magic-span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ff6b08);
-  }
-
-  .filter-item-btn:hover .magic-span:nth-child(1) {
-    left: 100%;
-    transition: 1s;
-  }
-  .magic-span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #ff6b08);
-  }
-
-  .filter-item-btn:hover .magic-span:nth-child(3) {
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-  }
-
-  .magic-span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #ff6b08);
-  }
-
-  .filter-item-btn:hover .magic-span:nth-child(2) {
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-  }
-
-  .magic-span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #ff6b08);
-  }
-
-  .filter-item-btn:hover .magic-span:nth-child(4) {
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
   }
 }

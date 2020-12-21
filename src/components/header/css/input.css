@@ -13,26 +13,39 @@ input::-webkit-search-results-decoration {
   outline: none;
   width: 24px;
   height: 24px;
-  background: url(../../search/icons/search-24px-black.svg);
+  background: url(../../search/icons/search-24px.svg);
 }
+
+.header__input--btn:focus {
+  background: url(../../search/icons/search-24px-orange.svg);
+}
+
 .header__input {
-  font-family: 'MontserratLight', sans-serif;
+  font-family: 'MontserratMedium', sans-serif;
   outline: none;
-  color: black;
+  color: #ff6b08;
+  background: #112437;
+  border: none;
+  border-radius: 40px;
   font-size: 12px;
   width: 405px;
   height: 44px;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-right: 40px;
   margin-right: 81px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-input-closed {
   display: none;
   position: absolute;
-  font-family: 'MontserratLight', sans-serif;
+  font-family: 'MontserratMedium', sans-serif;
   outline: none;
-  color: black;
+  color: #ff6b08;
+  background: #112437;
+  border: none;
+  border-radius: 40px;
   font-size: 12px;
   width: 300px;
   height: 40px;
@@ -41,6 +54,8 @@ input::-webkit-search-results-decoration {
   margin-right: 81px;
   opacity: 0;
   transition: 0.5s;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-input {
@@ -59,7 +74,7 @@ input::-webkit-search-results-decoration {
   z-index: 1;
   width: 24px;
   height: 24px;
-  background: url(../../search/icons/search-24px-black.svg);
+  background: url(../../search/icons/search-24px.svg);
 }
 
 .mobile-input-cross {
