@@ -1,9 +1,12 @@
+import '../node_modules/normalize.css/normalize.css';
+import './components/modal/modalBackDrop.js';
+import './styles.css';
+import './components/footer/styles.js';
+import './components/header/js/header';
+import './components/hero/slider-item/slider-item';
 import './components/card/index';
 import './components/loader/index';
-import '../node_modules/normalize.css/normalize.css';
-import './styles.css';
-import './components/auth/auth'
-import './components/footer/styles.js';
-import './components/hero/slider-item/slider-item';
-import './components/header/js/header';
-import './components/modal/modalBackDrop.js';
+// import './components/auth/auth';
+import './components/developers/js/index';
+import './components/developers/modal-window/dev-modal';
+import './components/developers/modal-window/dev-styles.css';
