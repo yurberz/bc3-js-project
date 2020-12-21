@@ -97,6 +97,8 @@
   line-height: 1.214;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+
+  box-shadow: 15px 15px 55px rgba(0, 0, 0, 0.3);
 }
 
 .active {
