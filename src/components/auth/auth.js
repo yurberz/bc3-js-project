@@ -27,6 +27,8 @@ const user = {
     password: '',
 };
 
+let accesTocken = "";
+
 let logInUser ={
   email: '',
   id: '',
@@ -34,7 +36,6 @@ let logInUser ={
   calls: [],
   registrationDate: '',
 };
-// const signUpUser = {};
 
 let signUpUser = {
     email: '',
@@ -65,6 +66,7 @@ const onLogInBtn = async () => {
     const result = await axios.post(`${url}/auth/login`, { ...user });
     logInUser = {...result.data.user}
     localStorage.setItem('accessToken', JSON.stringify(result.data.accessToken));
+    accesTocken = localStorage.getItem('accessToken');
 }
 
 const submitHandler = e => {
@@ -77,8 +79,6 @@ const submitHandler = e => {
 const clsModal = () => {
     console.log('close');
 };
-
-
 
 refs.authForm.addEventListener('submit', submitHandler);
 refs.authForm.addEventListener('input', gatherInfo);
