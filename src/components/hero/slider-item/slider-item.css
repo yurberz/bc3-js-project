@@ -54,7 +54,7 @@
   position: relative;
   text-align: right;
   margin: 0;
-  font-weight: 700;
+  font-family: 'MontserratBold';
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: -0.02em;
@@ -69,6 +69,7 @@
 
 .hero-slider__price {
   position: relative;
+  font-family: 'MontserratBold';
   font-weight: 700;
   font-size: 34px;
   line-height: 1.22;
@@ -80,9 +81,8 @@
 .hero-slider__price::before {
   content: '€';
   position: absolute;
-  top: 7px;
-  right: 52px;
-  font-weight: 700;
+  top: 6px;
+  right: 67px;
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -94,8 +94,8 @@
     font-size: 54px;
   }
   .hero-slider__price::before {
-    top: 13px;
-    right: 83px;
+    top: 11px;
+    right: 107px;
     font-size: 14px;
   }
 }
@@ -171,23 +171,25 @@
 }
 
 .slider-item__title {
-  font-weight: 700;
+  font-family: 'MontserratBold';
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: -0.02em;
-}
+  max-width: 202px;
+ }
 
 .slider-item__price {
-  font-weight: 700;
+  font-family: 'MontserratBold';
   font-size: 42px;
   line-height: 1.21;
   letter-spacing: -0.02em;
 }
 
-.slider-item__price_orange {
+.slider-item:nth-child(2) .slider-item__price {
   color: #ff6b09;
 }
-.slider-item__price_white {
+
+.slider-item:nth-child(3) .slider-item__price {
   color: #ffffff;
 }
 
@@ -218,3 +220,8 @@
 }
 
 
+.item-modal{
+  width: 400px;
+  height: 400px;
+  background-color:#ffffff;
+}
