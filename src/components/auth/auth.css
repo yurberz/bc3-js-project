@@ -2,6 +2,14 @@
 
 .auth__wrap {
   width: 530px;
+  /* height: 530px; */
+  padding: 50px;
+  outline: 1px solid teal;
+  position: relative;
+}
+
+.logOut__wrap {
+  width: 530px;
   height: 530px;
   padding: 50px;
   outline: 1px solid teal;
@@ -53,13 +61,6 @@
   height: 50px;
 }
 
-/* .authForm__svg {
-  width: 14px;
-  height: 14px;
-  fill: black;
-  display: block;
-} */
-
 .authForm__txt,
 .authForm__txt_out {
   font-family: Montserrat;
@@ -71,6 +72,8 @@
 }
 .authForm__txt_out {
   text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.02em;
 }
 
 .authForm__buttons {
@@ -100,4 +103,42 @@
   color: #ffffff;
   background-color: #ff6b09;
   border: 1px solid transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .auth__wrap {
+    width: 290px;
+    /* height: 530px; */
+    padding: 50px 20px;
+    outline: 1px solid teal;
+    position: relative;
+  }
+  .logOut__wrap {
+    width: 290px;
+    height: 205px;
+    padding: 45px 20px;
+    outline: 1px solid teal;
+    position: relative;
+  }
+  .authForm__btn_signUp,
+  .authForm__btn_logIn,
+  .authForm__btn_logOut,
+  .authForm__btn_exit {
+    width: 117px;
+    height: 50px;
+  }
+  .authForm__btn_signUp,
+  .authForm__btn_logIn {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .authForm__input {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .authForm__txt {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
