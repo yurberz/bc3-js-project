@@ -36,13 +36,12 @@ const createMarkup = data => {
     );
 };
 
-
 // open modal
 const onItemClick = event => {
   const {
     target: { nodeName },
   } = event; //event.target destructuring
-
+  
   if (nodeName !== 'LI' && nodeName !== 'IMG') return;
   modalBackDrop(itemModalTpl());
   console.log(nodeName);
