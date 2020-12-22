@@ -1,42 +1,46 @@
 import axios from 'axios';
-const baseUrl = 'https://callboard-backend.herokuapp.com';
+import { data } from '../../data/data';
+const token = localStorage.getItem('accessToken');
+axios.defaults.baseURL = 'https://callboard-backend.herokuapp.com';
+axios.defaults.headers.common['Authorization'] =
+  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmUwOGU1YTAzMGZmMDAwMTcxMmQxYmEiLCJzaWQiOiI1ZmUwOGU2MjAzMGZmMDAwMTcxMmQxYmMiLCJpYXQiOjE2MDg1NTIwMzQsImV4cCI6MTYwODU1NTYzNH0.gFZyyhMgfEUu598z17xbb7Dn55YJp1JALDWZKaK6Kiw';
 
 //=== Call endpoints ===//
 
-/* 
- Публикация, редактирование и удаление обьявления, получает такой обьект 
+/*
+ Публикация, редактирование и удаление обьявления, получает такой обьект
 */
 
 // const newAds = {
-//     title: "string",
-//     description: "string",
-//     category: "string",
-//     price: "integer",
-//     phone: "string",
-//     file: "string($binary)",
+//   title: "string",
+//   description: "string",
+//   category: "string",
+//   price: "integer",
+//   phone: "string",
+//   file: "string($binary)",
 // };
 
-// export const postAds = (newAds) => {
-//   return axios.post(`${baseUrl}/call`, newAds);
-// };
-
-export const postAds = advertData => {
-  const { title, description, category, price, phone, file } = advertData;
-  return axios.post(`${baseUrl}/call`, {
-    title,
-    description,
-    category,
-    price,
-    phone,
-    file,
-  });
+export const postAds = newAds => {
+  return axios.post(`/call`, newAds);
 };
+
+// export const postAds = (advertData) => {
+//   const { title, description, category, price, phone, file } = advertData;
+//   return axios.post(`/call`, {
+//     title,
+//     description,
+//     category,
+//     price,
+//     phone,
+//     file,
+//   });
+// };
 
 // postAds();
 
 export const patchAds = (advertData, id) => {
   const { title, description, category, price, phone, file } = advertData;
-  return axios.patch(`${baseUrl}/call/${id}`, {
+  return axios.patch(`/call/${id}`, {
     title,
     description,
     category,
@@ -49,14 +53,14 @@ export const patchAds = (advertData, id) => {
 // patchAds();
 
 export const delAds = id => {
-  return axios.delete(`${baseUrl}/call/${id}`);
+  return axios.delete(`/call/${id}`);
 };
 
 // delAds();
 
 //===
 
-/* 
+/*
  Получение страниц с категориями по номеру страницы(1-3) параметр page получает такие объекты
 */
 
@@ -97,7 +101,7 @@ export const delAds = id => {
 //   ],
 
 export const getPagesCategories = (page = 1) => {
-  return axios.get(`${baseUrl}/call?page=${page}`);
+  return axios.get(`/call?page=${page}`);
 };
 
 // getPagesCategories();
@@ -109,85 +113,84 @@ export const getPagesCategories = (page = 1) => {
 */
 
 export const getFavourites = () => {
-  return axios.get(`${baseUrl}/call/favourites`);
+  return axios.get(`/call/favourites`);
 };
 
 // getFavourites();
 
 export const addFavourite = id => {
-  return axios.post(`${baseUrl}/call/favourite/${id}`);
+  return axios.post(`/call/favourite/${id}`);
 };
 
 // addFavourite();
 
 export const delFavourite = id => {
-  return axios.delete(`${baseUrl}/call/favourite/${id}`);
+  return axios.delete(`/call/favourite/${id}`);
 };
 
 // delFavourite();
 
 //===
 
-/* 
+/*
  Получает список объявлений юзера
 */
 
 export const getUserCalls = () => {
-  return axios.get(`${baseUrl}/call/own}`);
+  return axios.get(`/call/own}`);
 };
 
 // getUserCalls();
 
 //===
 
-/* 
+/*
  Получение страниц с категориями по запросу(значения поля поиск)
 */
 
 export const getSearchQuery = searchQuery => {
-  return axios.get(`${baseUrl}/call/find?search=${searchQuery}`);
+  return axios.get(`/call/find?search=${searchQuery}`);
 };
 
-// getSearchQuery();
+// getSearchQuery('Work');
 
 //===
 
-/* 
+/*
  Получает список всех категорий товаров
 */
 
 // [
-//   "property",
-//   "transport",
-//   "work",
-//   "electronics",
-//   "business and services",
-//   "recreation and sport",
-//   "free",
-//   "trade",
+//   'Недвижимость',
+//   'Транспорт',
+//   'Работа',
+//   'Электроника',
+//   'Бизнес и услуги',
+//   'Отдых и спорт',
+//   'Отдам бесплатно',
+//   'Обмен',
 // ];
 
 export const getCategories = () => {
-  return axios.get(`${baseUrl}/call/categories`);
+  return axios.get(`/call/russian-categories`);
 };
 
 // getCategories();
-
 //===
 
-/* 
+/*
  Получает одну категорию со списка категорий
 */
 
 export const getOneCategory = cat => {
-  return axios.get(`${baseUrl}/call/specific/${cat}`);
+  return axios.get(`/call/specific/${cat}`);
 };
 
-// getOneCategory("work");
+// getOneCategory();
 
 //===
 
-/* 
+/*
  Получает список рекламных карточек
 */
 
@@ -207,9 +210,9 @@ export const getOneCategory = cat => {
 // ];
 
 export const getAds = () => {
-  return axios.get(`${baseUrl}/call/ads`);
+  return axios.get(`/call/ads`);
 };
 
-getAds();
+// getAds();
 
 //===
