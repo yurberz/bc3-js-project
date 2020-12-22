@@ -4,10 +4,10 @@
   background-color: white;
   width: 530px;
   padding: 50px;
-  outline: 1px solid teal;
   position: absolute;
-  top: 180px;
-  left: 200px;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 /* .logOut__wrap {
@@ -110,18 +110,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  .auth__wrap {
+  .authForm {
+    top: 43px;
     width: 290px;
-    /* height: 530px; */
     padding: 50px 20px;
-    outline: 1px solid teal;
     position: relative;
   }
   .logOut__wrap {
     width: 290px;
     height: 205px;
     padding: 45px 20px;
-    outline: 1px solid teal;
+    /* outline: 1px solid teal; */
     position: relative;
   }
   .authForm__btn_signUp,
@@ -144,5 +143,10 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
+  }
+}
+@media screen and (max-width: 1270px) {
+  .authForm {
+    top: 247px;
   }
 }

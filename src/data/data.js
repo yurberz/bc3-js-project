@@ -1,8 +1,18 @@
 import '../components/auth/auth'
 
-export const data = {
-    signUpUser: {},
-    logInUser: {},
+export const loggedUser = {
+    isAuth: false,
+    accessToken: '',
+    signUpUser: {
+        email: '',
+        id: '',
+        registrationDate: '',
+    },
+    logInUser: {
+        email: '',
+        id: '',
+        registrationDate: '',
+        calls: [],
+        favorites: [],
+    },
 }
-// console.log(signUpUser);
-// console.log(logInUser);
