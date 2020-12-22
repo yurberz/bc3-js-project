@@ -13,7 +13,8 @@
 
 </head>
 <body>
-  <header class="header">
+  <!-- header -->
+  <header class="header"> 
       <div class="container">
         <div class="mobile-menu-wrapper">
           <button class="mobile-input-cross"></button>
@@ -26,9 +27,9 @@
           <div class="mobile-menu-closed">
             <button class="close-menu"></button>
             <div class="header-auth-mobile">
-              <button class="sign-in__btn" data-btn="signin">Вход</button>
+              <button id="signInDrop" class="sign-in__btn" data-btn="signin">Вход</button>
               <span class="sign-in-up__stick"></span>
-              <button class="sign-up__btn" data-btn="signup">
+              <button id="signUpDrop" class="sign-up__btn" data-btn="signup">
                 Регистрация
               </button>
             </div>
@@ -57,13 +58,16 @@
           />
           <button class="header__input--btn"></button>
           <div class="header-auth">
-            <button class="sign-in__btn" data-btn="signin">Вход</button>
+            <button id="signInHeader" class="sign-in__btn" data-btn="signin">Вход</button>
             <span class="sign-in-up__stick"></span>
-            <button class="sign-up__btn" data-btn="signup">Регистрация</button>
+            <button id="signUpHeader" class="sign-up__btn" data-btn="signup">Регистрация</button>
           </div>
-          <button class="header__create-ad-btn modal-btn">
-            Создать объявление
-          </button>
+          <a href="#" class="header__create-ad-btn modal-btn">
+            <span>
+              Создать объявление
+            </span>
+            <div class="liquid"></div>
+          </a>
         </div>
         <div class="tablet-bottom-wrapper">
           <ul class="categories-filter"></ul>
@@ -86,6 +90,7 @@
       </div>
     </header>
   <main>
+    <button class="modal-btn"></button>
     <section class="hero">
       <div class="hero-wrapper">
         <ul class="hero-slider">
@@ -98,47 +103,10 @@
             </li>
         </ul>
         <ul class="side-items">
-          <li class="slider-item">
-            <div class="slider-item__description">
-              <p class="slider-item__title">Pink Beat<br>Headphones</p>
-              <p class="slider-item__price">599</p>
-            </div>
-            <img class="slider-item__image" src="./images/hero-img/headphones.png">
-          </li>
-
-          <li class="slider-item">
-            <div class="slider-item__description">
-              <p class="slider-item__title">Old School Radio</p>
-              <p class="slider-item__price slider-item__price_orange">975</p>
-            </div>
-            <img class="slider-item__image" src="./images/hero-img/radio.png">
-          </li>
         </ul>
 
         <ul class="bottom-items">
-          <li class="slider-item">
-            <div class="slider-item__description">
-              <p class="slider-item__title">Compact Stereo<br>Speakers</p>
-              <p class="slider-item__price">850</p>
-            </div>
-            <img class="slider-item__image" src="./images/hero-img/speaker.png">
-          </li>
-
-          <li class="slider-item">
-            <div class="slider-item__description">
-              <p class="slider-item__title">Drone Flying 42K<br>black</p>
-              <p class="slider-item__price slider-item__price_orange">4000</p>
-            </div>
-            <img class="slider-item__image" src="./images/hero-img/drone.png">
-          </li>
-
-          <li class="slider-item">
-            <div class="slider-item__description">
-              <p class="slider-item__title">Vintage Microphone<br>and Stand</p>
-              <p class="slider-item__price slider-item__price_white">2400</p>
-            </div>
-            <img class="slider-item__image" src="./images/hero-img/mic.png">
-          </li>
+        
         </ul>
       </div>
     </section>
@@ -866,6 +834,8 @@
     </div>
   </main>
    <footer class="footer">
+     <div class="modalContainer">
+     </div>
       <div class="container">
         <p class="text-1">
           &copy; 2020 &nbsp;&nbsp;<span class="line-1"></span>&nbsp;&nbsp; All

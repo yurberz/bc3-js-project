@@ -76,19 +76,10 @@
   margin-right: 8px;
 }
 
-.filter-item-btn {
-  padding: 8px 21px;
-  font-family: 'MontserratLight', sans-serif;
-  font-size: 12px;
-  color: #818181;
-  background-color: transparent;
-  border-width: 1px;
-  border-radius: 50px;
-  border-color: rgb(206, 210, 209);
-  border-style: solid;
-  opacity: 0.5;
-  outline: none;
-  transition: 0.5s;
+.filter-item-active {
+  display: inline-block;
+  height: 32px;
+  border: solid #112437 1px;
 }
 
 .mobile-clear-filters-wrapper:hover .header__clear-filter {
@@ -108,6 +99,110 @@
   background: url(../../refresh-filtres/filters/tune-24px-orange.svg);
 }
 
+/* =========================================================================FILTER BTN======================================== */
+.filter-item-btn {
+  position: relative;
+  display: inline-block;
+  padding: 8px 22px;
+  font-family: 'MontserratMedium', sans-serif;
+  font-size: 12px;
+  height: 30px;
+  text-decoration: none;
+  color: #818181;
+  background: #112437;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.active-category {
+  color: #1f1e1d;
+  border-color: transparent;
+  color: #ff6b08;
+  box-shadow: 0 0 10px #ff6b08, 0 0 40px #ff6b08, 0 0 80px #ff6b08;
+}
+
+.filter-item-btn:hover {
+  color: #ff6b08;
+}
+
+.magic-span {
+  position: absolute;
+  display: block;
+  background: #ff6b08;
+}
+
+.filter-item-btn .magic-span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+
+.filter-item-btn .magic-span:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.filter-item-btn .magic-span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.filter-item-btn .magic-span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+.filter-item-btn:hover .magic-span:nth-child(4) {
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+/* =========================================================================FILTER BTN======================================== */
 @media (min-width: 768px) {
   .clear-filters-wrapper {
     display: flex;
@@ -151,6 +246,10 @@
     margin-top: 15px;
   }
 
+  .categories-filter-item-opened {
+    display: flex;
+  }
+
   .categories-filter {
     display: none;
   }
@@ -182,12 +281,5 @@
   .filter-item:not(:last-of-type) {
     margin-right: 12px;
     cursor: pointer;
-  }
-
-  .filter-item:hover .filter-item-btn {
-    cursor: pointer;
-    border-color: #ff6b08;
-    color: #ff6b08;
-    opacity: 1;
   }
 }
