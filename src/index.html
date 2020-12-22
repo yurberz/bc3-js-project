@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>OLX-project</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous"></script>
+
 </head>
 <body>
   <!-- header -->
@@ -106,66 +112,722 @@
     </section>
     <section class="categories">
       <div class="container">
-        <div class="category">
-          <ul class="category-list">
+        <!-- Распродажа -->
+        <div class="category visible">
+          <div class="category-header">
+            <h2 class="category-title">Распродажа</h2>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, камеры,
+            аксессуары и многое другое.
+          </p>
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+           <!-- <picture class="card__picture">
+                  <source srcset="" media="(min-width:1280px)" type="image/webp">
+                  <source srcset="" media="(min-width:1280px)">
+                  <source srcset="" media="(min-width:768px)" type="image/webp">
+                  <source srcset="" media="(min-width:768px)">
+                  <source srcset="" media="(min-width:320px)" type="image/webp">
+                  <source srcset="" media="(min-width:320px)">
+                  <img class="card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+                </picture> -->
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <!-- <picture class="card__picture">
+                              <source srcset="" media="(min-width:1280px)" type="image/webp">
+                              <source srcset="" media="(min-width:1280px)">
+                              <source srcset="" media="(min-width:768px)" type="image/webp">
+                              <source srcset="" media="(min-width:768px)">
+                              <source srcset="" media="(min-width:320px)" type="image/webp">
+                              <source srcset="" media="(min-width:320px)">
+                              <img class="card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+                            </picture> -->
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Недвижимость -->
+        <div class="category visible">
+          <div class="category-header">
             <h2 class="category-title">Недвижимость</h2>
-            <!--The property-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
+        <!-- Транспорт -->
+        <div class="category unvisible">
+          <div class="category-header">
             <h2 class="category-title">Транспорт</h2>
-            <!--Transport-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
-            <h2 class="category-title">Робота</h2>
-            <!--Job-->
-            <li class="category-list_item"></li>
+        <!-- Работа -->
+        <div class="category unvisible">
+          <div class="category-header">
+            <h2 class="category-title">Работа</h2>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
+        <!-- Электроника -->
+        <div class="category unvisible">
+          <div class="category-header">
             <h2 class="category-title">Электроника</h2>
-            <!--Electronics-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
-            <h2 class="category-title">Бизнес и услуги</h2>
-            <!--Business and services-->
-            <li class="ccategory-list_item"></li>
+        <!-- Бизнес услуги -->
+        <div class="category unvisible">
+          <div class="category-header">
+            <h2 class="category-title">Бизнес услуги</h2>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
+        <!-- Отдых и спорт -->
+        <div class="category unvisible">
+          <div class="category-header">
             <h2 class="category-title">Отдых и спорт</h2>
-            <!--Leisure and sports-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <p class="category-card__price--old">2,000 €</p>
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
+        <!-- Отдам бесплатно -->
+        <div class="category unvisible">
+          <div class="category-header">
             <h2 class="category-title">Отдам бесплатно</h2>
-            <!--I will give it for free-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="category">
-          <ul class="category-list">
+        <!-- Обмен -->
+        <div class="category unvisible">
+          <div class="category-header">
             <h2 class="category-title">Обмен</h2>
-            <!--Exchange-->
-            <li class="category-list_item"></li>
+            <a href="" class="category-link" data-category="category">Смотреть все</a>
+          </div>
+          <!-- <p class="category-description">
+            Товары домашнего обихода, видео, аудио, наушники, <br> камеры,
+            аксессуары и многое другое.
+          </p> -->
+          <ul class="category-list sliders">
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
+            <li class="category-card sliders-item">
+              <img class="category-card__img" src="./components/card/images/card-1.jpg" alt="photo Victrola Vintage">
+              <p class="category-card__name">Victrola Vintage</p>
+              <div class="category-card__prices">
+                <!-- <p class="category-card__price--old">2,000 €</p> -->
+                <p class="category-card__price--new">1,200 €</p>
+              </div>
+            </li>
           </ul>
         </div>
-      </section>
-<div class="loader"> 
+        
+      </div>
+    </section>
+      <div class="loader"> 
         <button type="button" class="loader__btn">Загрузить ещё</button>
-
       </div>
       <div class="modal-wrapper">
       <div class="modal"></div>

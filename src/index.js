@@ -10,3 +10,4 @@ import './components/modal/modalBackDrop.js';
 import './components/developers/js/index';
 import './components/developers/modal-window/dev-modal';
 import './components/developers/modal-window/dev-styles.css';
+import './components/catalog/categories-list-item/index.js';

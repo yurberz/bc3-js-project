@@ -55,6 +55,7 @@
     "handlebars": "^4.7.6",
     "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
     "validator": "^13.5.2"
   }
 }
