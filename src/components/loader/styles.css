@@ -1,10 +1,10 @@
 .loader {
   background: #02172a;
+  width: 100%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .loader {
-    width: 320px;
     height: 70px;
     padding-top: 24px;
   }
@@ -12,7 +12,6 @@
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .loader {
-    width: 768px;
     height: 96px;
     padding-top: 37px;
   }
@@ -20,7 +19,6 @@
 
 @media screen and (min-width: 1280px) {
   .loader {
-    width: 1280px;
     height: 106px;
     padding-top: 41px;
   }
@@ -29,7 +27,7 @@
 button.loader__btn {
   display: block;
   margin: auto;
-  font-family: Montserrat;
+  font-family: MontserratSemiBold;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
@@ -37,4 +35,22 @@ button.loader__btn {
   background: #02172a;
   color: #ffffff;
   border: none;
+  opacity: 1;
+  transition-property: opacity;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button.loader__btn.hide {
+  display: none;
+}
+
+button.loader__btn:hover,
+button.loader__btn:focus,
+button.loader__btn:active {
+  color: #ff6b09;
+  opacity: 0.8;
+  cursor: pointer;
+  outline: none;
 }
