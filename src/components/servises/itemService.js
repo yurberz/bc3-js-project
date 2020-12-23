@@ -2,8 +2,7 @@ import axios from 'axios';
 import { data } from '../../data/data';
 const token = localStorage.getItem('accessToken');
 axios.defaults.baseURL = 'https://callboard-backend.herokuapp.com';
-axios.defaults.headers.common['Authorization'] =
-  'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI1ZmUwOGU1YTAzMGZmMDAwMTcxMmQxYmEiLCJzaWQiOiI1ZmUwOGU2MjAzMGZmMDAwMTcxMmQxYmMiLCJpYXQiOjE2MDg1NTIwMzQsImV4cCI6MTYwODU1NTYzNH0.gFZyyhMgfEUu598z17xbb7Dn55YJp1JALDWZKaK6Kiw';
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
 //=== Call endpoints ===//
 
@@ -171,9 +170,17 @@ export const getSearchQuery = searchQuery => {
 //   'Обмен',
 // ];
 
-export const getCategories = () => {
-  return axios.get(`/call/russian-categories`);
+export const getCategories = async () => {
+  if (data.call.allCategories.length) {
+    return data.call.allCategories;
+  } else {
+    const res = await axios.get(`/call/categories`);
+    data.call.allCategories = [...res];
+
+    return res;
+  }
 };
+console.log(data.call.allCategories);
 
 // getCategories();
 //===

@@ -1,4 +1,5 @@
 import '../components/auth/auth';
+import '../components/servises/itemService';
 
 export const loggedUser = {
   isAuth: false,
@@ -14,5 +15,12 @@ export const loggedUser = {
     registrationDate: '',
     calls: [],
     favorites: [],
+  },
+};
+
+export const data = {
+  call: {
+    allCategories: [],
+    category: {},
   },
 };
