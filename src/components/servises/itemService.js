@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { data } from '../../data/data';
+import { loggedUser } from '../../data/data';
 const token = localStorage.getItem('accessToken');
 axios.defaults.baseURL = 'https://callboard-backend.herokuapp.com';
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -117,8 +118,15 @@ export const getFavourites = () => {
 
 // getFavourites();
 
-export const addFavourite = id => {
-  return axios.post(`/call/favourite/${id}`);
+export const addFavourite = async id => {
+  if (loggedUser.logInUser.favorites.length) {
+    return loggedUser.logInUser.favorites;
+  } else {
+    const responce = await axios.post(`/call/favourite/${id}`);
+    loggedUser.logInUser.favorites = [...responce];
+
+    return responce;
+  }
 };
 
 // addFavourite();

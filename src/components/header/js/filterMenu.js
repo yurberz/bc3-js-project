@@ -16,7 +16,7 @@ markupFilter();
 const markup = cat => {
   const filterCategories = { categories: cat };
   categoriesList.insertAdjacentHTML('beforeend', other(filterCategories));
-  console.log(filterCategories);
+  //   console.log(filterCategories);
 };
 
 // //===
@@ -32,12 +32,6 @@ const mobileFiltersBtn = document.querySelector('.mobile-filters-wrapper');
 //   });
 // };
 
-// const tabletFilter = () => {
-//   getCategories().then(data => {
-//     markupTablet(data);
-//   });
-// };
-
 // const markupMobile = cat => {
 //   const filterCategories = { categories: cat };
 
@@ -50,31 +44,37 @@ const mobileFiltersBtn = document.querySelector('.mobile-filters-wrapper');
 
 // mobileFiltersBtn.addEventListener('click', mobileFilter);
 
-// const markupTablet = cat => {
-//   const filterCategories = { categories: cat };
+const tabletFilter = () => {
+  getCategories().then(data => {
+    markupTablet(data);
+  });
+};
 
-//   if (tabletFilters.innerHTML === '') {
-//     tabletFilters.style.display = 'flex';
-//     tabletFilters.innerHTML = other(filterCategories);
-//   } else {
-//     tabletFilters.innerHTML = '';
-//     tabletFilters.style.display = 'none';
-//   }
-// };
+const markupTablet = cat => {
+  const filterCategories = { categories: cat };
 
-const markupTablet = () => {
-  if (window.screen.width > 1279) {
-    categoriesList.style.display = 'flex';
-  }
-
-  if (categoriesList.style.display === 'flex') {
-    categoriesList.style.display = 'none';
+  if (tabletFilters.innerHTML === '') {
+    tabletFilters.style.display = 'flex';
+    tabletFilters.innerHTML = other(filterCategories);
   } else {
-    categoriesList.style.display = 'flex';
+    tabletFilters.innerHTML = '';
+    tabletFilters.style.display = 'none';
   }
 };
 
-filterBtn.addEventListener('click', markupTablet);
+filterBtn.addEventListener('click', tabletFilter);
+
+// const markupTablet = () => {
+//   if (window.screen.width > 320 && window.screen.width < 1279) {
+//     if (categoriesList.style.display === 'flex') {
+//       categoriesList.style.display = 'none';
+//     } else {
+//       categoriesList.style.display = 'flex';
+//     }
+//   }
+// };
+
+// filterBtn.addEventListener('click', markupTablet);
 
 // //===
 

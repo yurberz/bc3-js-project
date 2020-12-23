@@ -20,6 +20,7 @@ export const loggedUser = {
 
 export const data = {
   call: {
+    ads: [],
     allCategories: [],
     category: {},
   },
